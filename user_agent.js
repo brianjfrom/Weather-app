@@ -1,1 +1,1 @@
-let User-Agent = USER_AGENT;
+let User-Agent = ${{ secrets.USER_AGENT }};
