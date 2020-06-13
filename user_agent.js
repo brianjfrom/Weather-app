@@ -1,1 +1,1 @@
-let userAgent = ${{ secrets.USER_AGENT }};
+export default let userAgent = ${{ secrets.USER_AGENT }};
