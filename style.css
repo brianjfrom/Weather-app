@@ -1,0 +1,139 @@
+body {
+  color: black;
+  height: 100vh;
+}
+
+.mostRecent {
+  height: 45vh;
+  background: lightblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  
+  h2 {
+    grid-column: 1/7;
+    font-size: 2.5em;
+    text-align: center;
+    
+    span {
+      font-size: 1.5rem;
+    }
+  }
+  
+  #weatherIcon {
+    width: 10vw;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: end
+  }
+  
+  .weatherDay {
+      
+    h3 {
+      font-size: 1.8em;
+      padding-left: 1em ;
+    }
+    
+    h1 {
+      font-size: 4.5em;
+      padding-left: 1em;
+    }
+  }
+  .windweather {
+    grid-column: 4 / 5;
+  }
+  .forcast {
+    grid-row: 4/4;
+    grid-column: 2/5;
+    font-size: 2rem;
+  }
+}
+.future_container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background: darkblue;
+}
+.future_forecast {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: .5em;
+  padding: 1rem;
+  
+}
+.next_cycle {
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 1.5;
+  background-color: lightseagreen;
+  
+  .next_name {
+    font-weight: bold;
+  }
+  
+  &:nth-child(1n) {
+    margin-bottom: 1em;
+  }
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5vh;
+  background-color: lightblue;
+}
+
+@media screen and (max-width: 690px) {
+  .mostRecent {
+    display: grid;
+    height: 90vh;
+    
+    h2 {
+    font-size: 2rem;
+    align-self: center;
+    padding: 1em 
+    }
+    #city,
+    #state {
+      font-size: 1.5rem;
+    }
+    
+    #weatherIcon {
+    width: 10vw;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    }
+    
+    .weatherDay {
+      grid-column: 2 / 5;
+      justify-content: center;
+
+      
+      h1 {
+        font-size: 3.0rem;
+        justify-self: start;
+      }
+    }
+    .windweather {
+      grid-column: 1 / 7;
+      grid-row: 3 / 4;
+      justify-self: center;
+      align-self: center
+    }
+    .forcast {
+      grid-column: 1 / 7;
+      padding: 0.5em;
+      font-size: 1.5rem;
+    }
+  }
+  
+  .future_forecast {
+    display: block;
+  }
+}
+@media screen and (min-height: 750px) {
+  .mostRecent {
+    height: 60vh;
+  }
+}
+
