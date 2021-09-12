@@ -6,11 +6,11 @@ body {
   }
   
   .mostRecent {
-    height: 45vh;
+    /* height: 45vh; */
     background: lightblue;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 0.5fr auto 2vh;
   }
   .mostRecent h2 {
     grid-column: 1/7;
@@ -81,7 +81,7 @@ body {
   @media screen and (max-width: 690px) {
     .mostRecent {
       display: grid;
-      height: 90vh;
+      /* height: 90vh; */
     }
     .mostRecent h2 {
       font-size: 2rem;
@@ -121,9 +121,9 @@ body {
       display: block;
     }
   }
-  @media screen and (min-height: 750px) {
+  /* @media screen and (min-height: 750px) {
     .mostRecent {
       height: 60vh;
     }
-  }
+  } */
   
